@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kumite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="2xl:container mx-auto">
+      <div class="w-98% mx-auto grid grid-cols-2">
+        <div class="bg-red-600 flex flex-col items-center text-white">
+          <div class="text-[58px]">
+            <h1 id="r+">+</h1>
+          </div>
+          <div class="text-[80px]">
+            <h1 id="rc">0</h1>
+          </div>
+          <div class="text-[58px]">
+            <h1 id="r-">-</h1>
+          </div>
+          <div class="flex p-2 gap-1">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-icon lucide-circle"
+                id="r1o"
+              >
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-ban-icon lucide-ban hidden"
+                id="r1c"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m4.9 4.9 14.2 14.2" />
+              </svg>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-icon lucide-circle"
+                id="r2o"
+              >
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-ban-icon lucide-ban hidden"
+                id="r2c"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m4.9 4.9 14.2 14.2" />
+              </svg>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-icon lucide-circle"
+                id="r3o"
+              >
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-ban-icon lucide-ban hidden"
+                id="r3c"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m4.9 4.9 14.2 14.2" />
+              </svg>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-icon lucide-circle"
+                id="r4o"
+              >
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-ban-icon lucide-ban hidden"
+                id="r4c"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m4.9 4.9 14.2 14.2" />
+              </svg>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-icon lucide-circle"
+                id="r5o"
+              >
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-ban-icon lucide-ban hidden"
+                id="r5c"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m4.9 4.9 14.2 14.2" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="bg-blue-600 flex flex-col items-center text-white">
+          <div class="text-[58px]">
+            <h1 id="b+">+</h1>
+          </div>
+          <div class="text-[80px]">
+            <h1 id="bc">0</h1>
+          </div>
+          <div class="text-[58px]">
+            <h1 id="b-">-</h1>
+          </div>
+          <div class="flex p-2 gap-1">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-icon lucide-circle"
+                id="b1o"
+              >
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-ban-icon lucide-ban hidden"
+                id="b1c"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m4.9 4.9 14.2 14.2" />
+              </svg>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-icon lucide-circle"
+                id="b2o"
+              >
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-ban-icon lucide-ban hidden"
+                id="b2c"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m4.9 4.9 14.2 14.2" />
+              </svg>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-icon lucide-circle"
+                id="b3o"
+              >
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-ban-icon lucide-ban hidden"
+                id="b3c"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m4.9 4.9 14.2 14.2" />
+              </svg>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-icon lucide-circle"
+                id="b4o"
+              >
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-ban-icon lucide-ban hidden"
+                id="b4c"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m4.9 4.9 14.2 14.2" />
+              </svg>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-icon lucide-circle"
+                id="b5o"
+              >
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-ban-icon lucide-ban hidden"
+                id="b5c"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m4.9 4.9 14.2 14.2" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 class="text-center text-[38px] font-extrabold">KUMITE</h1>
+    <!-- Second Part -->
+    <section >
+      <div class="2xl:container mx-auto">
+        <div class="w-98% mx-auto grid grid-cols-1 ">
+          <div class="flex flex-col justify-center items-center ">
+            <div class="text-[50px] flex-col items-center p-[10px] pt-0 rounded-lg shadow-2xl">
+              <div id="timer" class="text-center">00:00</div>
+              <div class="text-center">------------------------</div>
+              <div class="flex justify-evenly gap-8 text-[18px] p-[10px 20px] m-[10px 5px] cursor-pointer">
+                <div><button onclick="startTimer()" class="hover:text-[24px]">Start</button></div>
+                <div><button onclick="stopTimer()" class="hover:text-[24px]">Stop</button></div>
+                <div><button onclick="resetTimer()" class="hover:text-[24px]">Reset</button></div>
+              </div>
+              <div class="text-center">------------------------</div>
+              <div class="flex justify-evenly gap-8 text-[18px] p-[10px 20px] m-[10px 5px] cursor-pointer">
+                <div><button onclick="increaseTimet()" class="hover:text-[24px]">+30s</button></div>
+                <div><button onclick="increaseTime()" class="hover:text-[24px]">+1s</button></div>
+                <div><button onclick="decreaseTime()" class="hover:text-[24px]">-1s</button></div>
+                <div><button onclick="decreaseTimet()" class="hover:text-[24px]">-30s</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      // fouls--blue
+      var boneo = document.getElementById("b1o");
+      var bonec = document.getElementById("b1c");
+      var btwoo = document.getElementById("b2o");
+      var btwoc = document.getElementById("b2c");
+      var bthreeo = document.getElementById("b3o");
+      var bthreec = document.getElementById("b3c");
+      var bfouro = document.getElementById("b4o");
+      var bfourc = document.getElementById("b4c");
+      var bfiveo = document.getElementById("b5o");
+      var bfivec = document.getElementById("b5c");
+      
+      boneo.addEventListener("click",() =>{
+        bonec.classList.toggle("hidden");
+        boneo.classList.toggle("hidden");
+      })
+      bonec.addEventListener("click",() =>{
+        boneo.classList.toggle("hidden");
+        bonec.classList.toggle("hidden");
+      })
+      btwoo.addEventListener("click",() =>{
+        btwoc.classList.toggle("hidden");
+        btwoo.classList.toggle("hidden");
+      })
+      btwoc.addEventListener("click",() =>{
+        btwoo.classList.toggle("hidden");
+        btwoc.classList.toggle("hidden");
+      })
+      bthreeo.addEventListener("click",() =>{
+        bthreec.classList.toggle("hidden");
+        bthreeo.classList.toggle("hidden");
+      })
+      bthreec.addEventListener("click",() =>{
+        bthreeo.classList.toggle("hidden");
+        bthreec.classList.toggle("hidden");
+      })
+      bfouro.addEventListener("click",() =>{
+        bfourc.classList.toggle("hidden");
+        bfouro.classList.toggle("hidden");
+      })
+      bfourc.addEventListener("click",() =>{
+        bfouro.classList.toggle("hidden");
+        bfourc.classList.toggle("hidden");
+      })
+      bfiveo.addEventListener("click",() =>{
+        bfivec.classList.toggle("hidden");
+        bfiveo.classList.toggle("hidden");
+      })
+      bfivec.addEventListener("click",() =>{
+        bfiveo.classList.toggle("hidden");
+        bfivec.classList.toggle("hidden");
+      })
+      // fouls--red
+      var roneo = document.getElementById("r1o");
+      var ronec = document.getElementById("r1c");
+      var rtwoo = document.getElementById("r2o");
+      var rtwoc = document.getElementById("r2c");
+      var rthreeo = document.getElementById("r3o");
+      var rthreec = document.getElementById("r3c");
+      var rfouro = document.getElementById("r4o");
+      var rfourc = document.getElementById("r4c");
+      var rfiveo = document.getElementById("r5o");
+      var rfivec = document.getElementById("r5c");
+      
+      roneo.addEventListener("click",() =>{
+        ronec.classList.toggle("hidden");
+        roneo.classList.toggle("hidden");
+      })
+      ronec.addEventListener("click",() =>{
+        roneo.classList.toggle("hidden");
+        ronec.classList.toggle("hidden");
+      })
+      rtwoo.addEventListener("click",() =>{
+        rtwoc.classList.toggle("hidden");
+        rtwoo.classList.toggle("hidden");
+      })
+      rtwoc.addEventListener("click",() =>{
+        rtwoo.classList.toggle("hidden");
+        rtwoc.classList.toggle("hidden");
+      })
+      rthreeo.addEventListener("click",() =>{
+        rthreec.classList.toggle("hidden");
+        rthreeo.classList.toggle("hidden");
+      })
+      rthreec.addEventListener("click",() =>{
+        rthreeo.classList.toggle("hidden");
+        rthreec.classList.toggle("hidden");
+      })
+      rfouro.addEventListener("click",() =>{
+        rfourc.classList.toggle("hidden");
+        rfouro.classList.toggle("hidden");
+      })
+      rfourc.addEventListener("click",() =>{
+        rfouro.classList.toggle("hidden");
+        rfourc.classList.toggle("hidden");
+      })
+      rfiveo.addEventListener("click",() =>{
+        rfivec.classList.toggle("hidden");
+        rfiveo.classList.toggle("hidden");
+      })
+      rfivec.addEventListener("click",() =>{
+        rfiveo.classList.toggle("hidden");
+        rfivec.classList.toggle("hidden");
+      })
+
+      // counter
+      var rplus = document.getElementById("r+");
+      var rcount = document.getElementById("rc");
+      var rneg = document.getElementById("r-");
+      rplus.addEventListener("click",() => {
+        rcount.textContent = parseInt(rcount.textContent)+1;
+      })
+      rneg.addEventListener("click",() =>{
+        rcount.textContent = parseInt(rcount.textContent)-1;
+      })
+      var bplus = document.getElementById("b+");
+      var bcount = document.getElementById("bc");
+      var bneg = document.getElementById("b-");
+      bplus.addEventListener("click",() => {
+        bcount.textContent = parseInt(bcount.textContent)+1;
+      })
+      bneg.addEventListener("click",() =>{
+        bcount.textContent = parseInt(bcount.textContent)-1;
+      })
+      // Set initial time here
+    let INITIAL_MINUTES = 0;
+    let INITIAL_SECONDS = 0o0;
+    let totalSeconds = INITIAL_MINUTES * 60 + INITIAL_SECONDS;
+    let timerInterval = null;
+
+    function updateDisplay() {
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      document.getElementById("timer").textContent =
+        String(minutes).padStart(2, '0') + ":" + String(seconds).padStart(2, '0');
+    }
+
+    function tick() {
+      if (totalSeconds > 0) {
+        totalSeconds--;
+        updateDisplay();
+      } else {
+        stopTimer(); // stop when time is up
+      }
+    }
+
+    function startTimer() {
+      if (!timerInterval) {
+        timerInterval = setInterval(tick, 1000);
+      }
+    }
+
+    function stopTimer() {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
+
+    function resetTimer() {
+      roneo.classList.remove("hidden");
+      ronec.classList.add("hidden");
+      rtwoo.classList.remove("hidden");
+      rtwoc.classList.add("hidden");
+      rthreeo.classList.remove("hidden");
+      rthreec.classList.add("hidden");
+      rfouro.classList.remove("hidden");
+      rfourc.classList.add("hidden");
+      rfiveo.classList.remove("hidden");
+      rfivec.classList.add("hidden");
+      boneo.classList.remove("hidden");
+      bonec.classList.add("hidden");
+      btwoo.classList.remove("hidden");
+      btwoc.classList.add("hidden");
+      bthreeo.classList.remove("hidden");
+      bthreec.classList.add("hidden");
+      bfouro.classList.remove("hidden");
+      bfourc.classList.add("hidden");
+      bfiveo.classList.remove("hidden");
+      bfivec.classList.add("hidden");
+      rcount.textContent = 0;
+      bcount.textContent = 0;
+      stopTimer();
+      totalSeconds = INITIAL_MINUTES * 60 + INITIAL_SECONDS;
+      updateDisplay();
+    }
+
+    function increaseTimet() {
+      totalSeconds+=30;
+      updateDisplay();
+    }
+
+    function increaseTime() {
+      totalSeconds++;
+      updateDisplay();
+    }
+
+    function decreaseTime() {
+      if (totalSeconds > 0) {
+        totalSeconds--;
+        updateDisplay();
+      }
+    }
+
+    function decreaseTimet() {
+      if (totalSeconds > 0) {
+        totalSeconds-=30;
+        updateDisplay();
+      }
+    }
+    updateDisplay();
+  </script>
+  </body>
+</html>
