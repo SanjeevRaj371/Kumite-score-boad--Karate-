@@ -9,7 +9,7 @@
   <body>
     <div class="2xl:container mx-auto">
       <div class="w-98% mx-auto grid grid-cols-2">
-        <div class="bg-red-600 flex flex-col items-center text-white">
+        <div class="bg-red-600 flex flex-col items-center text-white cursor-pointer">
           <div class="text-[58px]">
             <h1 id="r+">+</h1>
           </div>
@@ -187,7 +187,7 @@
             </div>
           </div>
         </div>
-        <div class="bg-blue-600 flex flex-col items-center text-white">
+        <div class="bg-blue-600 flex flex-col items-center text-white cursor-pointer">
           <div class="text-[58px]">
             <h1 id="b+">+</h1>
           </div>
@@ -367,7 +367,11 @@
         </div>
       </div>
     </div>
-    <h1 class="text-center text-[38px] font-extrabold">KUMITE</h1>
+    <div class="flex items-center justify-center gap-8">
+      <button class="border-black border-2 px-2 py-1 rounded-lg " id="rsen">SENSHU</button>
+      <h1 class="text-center text-[38px] font-extrabold">KUMITE</h1>
+      <button class="border-black border-2 px-2 py-1 rounded-lg" id="bsen">SENSHU</button>
+    </div>
     <!-- Second Part -->
     <section >
       <div class="2xl:container mx-auto">
@@ -394,6 +398,19 @@
       </div>
     </section>
     <script>
+      // senshu
+      var rsen = document.getElementById("rsen");
+      var bsen = document.getElementById("bsen");
+
+      rsen.addEventListener("click",() =>{
+        bsen.classList.add("hidden");
+        rsen.classList.add("bg-red-500");
+      })
+
+      bsen.addEventListener("click",() =>{
+        rsen.classList.add("hidden");
+        bsen.classList.add("bg-blue-500");
+      })
       // fouls--blue
       var boneo = document.getElementById("b1o");
       var bonec = document.getElementById("b1c");
@@ -407,44 +424,84 @@
       var bfivec = document.getElementById("b5c");
       
       boneo.addEventListener("click",() =>{
-        bonec.classList.toggle("hidden");
-        boneo.classList.toggle("hidden");
+        bonec.classList.remove("hidden");
+        boneo.classList.add("hidden");
       })
       bonec.addEventListener("click",() =>{
-        boneo.classList.toggle("hidden");
-        bonec.classList.toggle("hidden");
+        boneo.classList.remove("hidden");
+        bonec.classList.add("hidden");
       })
       btwoo.addEventListener("click",() =>{
-        btwoc.classList.toggle("hidden");
-        btwoo.classList.toggle("hidden");
+        bonec.classList.remove("hidden");
+        boneo.classList.add("hidden");
+        btwoc.classList.remove("hidden");
+        btwoo.classList.add("hidden");
       })
       btwoc.addEventListener("click",() =>{
-        btwoo.classList.toggle("hidden");
-        btwoc.classList.toggle("hidden");
+        boneo.classList.remove("hidden");
+        bonec.classList.add("hidden");
+        btwoo.classList.remove("hidden");
+        btwoc.classList.add("hidden");
       })
       bthreeo.addEventListener("click",() =>{
-        bthreec.classList.toggle("hidden");
-        bthreeo.classList.toggle("hidden");
+        bonec.classList.remove("hidden");
+        boneo.classList.add("hidden");
+        btwoc.classList.remove("hidden");
+        btwoo.classList.add("hidden");
+        bthreec.classList.remove("hidden");
+        bthreeo.classList.add("hidden");
       })
       bthreec.addEventListener("click",() =>{
-        bthreeo.classList.toggle("hidden");
-        bthreec.classList.toggle("hidden");
+        boneo.classList.remove("hidden");
+        bonec.classList.add("hidden");
+        btwoo.classList.remove("hidden");
+        btwoc.classList.add("hidden");
+        bthreeo.classList.remove("hidden");
+        bthreec.classList.add("hidden");
       })
       bfouro.addEventListener("click",() =>{
-        bfourc.classList.toggle("hidden");
-        bfouro.classList.toggle("hidden");
+        bonec.classList.remove("hidden");
+        boneo.classList.add("hidden");
+        btwoc.classList.remove("hidden");
+        btwoo.classList.add("hidden");
+        bthreec.classList.remove("hidden");
+        bthreeo.classList.add("hidden");
+        bfourc.classList.remove("hidden");
+        bfouro.classList.add("hidden");
       })
       bfourc.addEventListener("click",() =>{
-        bfouro.classList.toggle("hidden");
-        bfourc.classList.toggle("hidden");
+        boneo.classList.remove("hidden");
+        bonec.classList.add("hidden");
+        btwoo.classList.remove("hidden");
+        btwoc.classList.add("hidden");
+        bthreeo.classList.remove("hidden");
+        bthreec.classList.add("hidden");
+        bfouro.classList.remove("hidden");
+        bfourc.classList.add("hidden");
       })
       bfiveo.addEventListener("click",() =>{
-        bfivec.classList.toggle("hidden");
-        bfiveo.classList.toggle("hidden");
+        bonec.classList.remove("hidden");
+        boneo.classList.add("hidden");
+        btwoc.classList.remove("hidden");
+        btwoo.classList.add("hidden");
+        bthreec.classList.remove("hidden");
+        bthreeo.classList.add("hidden");
+        bfourc.classList.remove("hidden");
+        bfouro.classList.add("hidden");
+        bfivec.classList.remove("hidden");
+        bfiveo.classList.add("hidden");
       })
       bfivec.addEventListener("click",() =>{
-        bfiveo.classList.toggle("hidden");
-        bfivec.classList.toggle("hidden");
+        boneo.classList.remove("hidden");
+        bonec.classList.add("hidden");
+        btwoo.classList.remove("hidden");
+        btwoc.classList.add("hidden");
+        bthreeo.classList.remove("hidden");
+        bthreec.classList.add("hidden");
+        bfouro.classList.remove("hidden");
+        bfourc.classList.add("hidden");
+        bfiveo.classList.remove("hidden");
+        bfivec.classList.add("hidden");
       })
       // fouls--red
       var roneo = document.getElementById("r1o");
@@ -459,44 +516,84 @@
       var rfivec = document.getElementById("r5c");
       
       roneo.addEventListener("click",() =>{
-        ronec.classList.toggle("hidden");
-        roneo.classList.toggle("hidden");
+        ronec.classList.remove("hidden");
+        roneo.classList.add("hidden");
       })
       ronec.addEventListener("click",() =>{
-        roneo.classList.toggle("hidden");
-        ronec.classList.toggle("hidden");
+        roneo.classList.remove("hidden");
+        ronec.classList.add("hidden");
       })
       rtwoo.addEventListener("click",() =>{
-        rtwoc.classList.toggle("hidden");
-        rtwoo.classList.toggle("hidden");
+        ronec.classList.remove("hidden");
+        roneo.classList.add("hidden");
+        rtwoc.classList.remove("hidden");
+        rtwoo.classList.add("hidden");
       })
       rtwoc.addEventListener("click",() =>{
-        rtwoo.classList.toggle("hidden");
-        rtwoc.classList.toggle("hidden");
+        roneo.classList.remove("hidden");
+        ronec.classList.add("hidden");
+        rtwoo.classList.remove("hidden");
+        rtwoc.classList.add("hidden");
       })
       rthreeo.addEventListener("click",() =>{
-        rthreec.classList.toggle("hidden");
-        rthreeo.classList.toggle("hidden");
+        ronec.classList.remove("hidden");
+        roneo.classList.add("hidden");
+        rtwoc.classList.remove("hidden");
+        rtwoo.classList.add("hidden");
+        rthreec.classList.remove("hidden");
+        rthreeo.classList.add("hidden");
       })
       rthreec.addEventListener("click",() =>{
-        rthreeo.classList.toggle("hidden");
-        rthreec.classList.toggle("hidden");
+        roneo.classList.remove("hidden");
+        ronec.classList.add("hidden");
+        rtwoo.classList.remove("hidden");
+        rtwoc.classList.add("hidden");
+        rthreeo.classList.remove("hidden");
+        rthreec.classList.add("hidden");
       })
       rfouro.addEventListener("click",() =>{
-        rfourc.classList.toggle("hidden");
-        rfouro.classList.toggle("hidden");
+        ronec.classList.remove("hidden");
+        roneo.classList.add("hidden");
+        rtwoc.classList.remove("hidden");
+        rtwoo.classList.add("hidden");
+        rthreec.classList.remove("hidden");
+        rthreeo.classList.add("hidden");
+        rfourc.classList.remove("hidden");
+        rfouro.classList.add("hidden");
       })
       rfourc.addEventListener("click",() =>{
-        rfouro.classList.toggle("hidden");
-        rfourc.classList.toggle("hidden");
+        roneo.classList.remove("hidden");
+        ronec.classList.add("hidden");
+        rtwoo.classList.remove("hidden");
+        rtwoc.classList.add("hidden");
+        rthreeo.classList.remove("hidden");
+        rthreec.classList.add("hidden");
+        rfouro.classList.remove("hidden");
+        rfourc.classList.add("hidden");
       })
       rfiveo.addEventListener("click",() =>{
-        rfivec.classList.toggle("hidden");
-        rfiveo.classList.toggle("hidden");
+        ronec.classList.remove("hidden");
+        roneo.classList.add("hidden");
+        rtwoc.classList.remove("hidden");
+        rtwoo.classList.add("hidden");
+        rthreec.classList.remove("hidden");
+        rthreeo.classList.add("hidden");
+        rfourc.classList.remove("hidden");
+        rfouro.classList.add("hidden");
+        rfivec.classList.remove("hidden");
+        rfiveo.classList.add("hidden");
       })
       rfivec.addEventListener("click",() =>{
-        rfiveo.classList.toggle("hidden");
-        rfivec.classList.toggle("hidden");
+        roneo.classList.remove("hidden");
+        ronec.classList.add("hidden");
+        rtwoo.classList.remove("hidden");
+        rtwoc.classList.add("hidden");
+        rthreeo.classList.remove("hidden");
+        rthreec.classList.add("hidden");
+        rfouro.classList.remove("hidden");
+        rfourc.classList.add("hidden");
+        rfiveo.classList.remove("hidden");
+        rfivec.classList.add("hidden");
       })
 
       // counter
@@ -552,6 +649,10 @@
     }
 
     function resetTimer() {
+      rsen.classList.remove("hidden");
+      bsen.classList.remove("bg-blue-500");
+      bsen.classList.remove("hidden");
+      rsen.classList.remove("bg-red-500");
       roneo.classList.remove("hidden");
       ronec.classList.add("hidden");
       rtwoo.classList.remove("hidden");
