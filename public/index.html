@@ -8,10 +8,63 @@
   </head>
   <body>
     <div class="2xl:container mx-auto">
+      <div class="w-98% mx-auto">
+        <div class="flex justify-center items-center">
+          <div>
+            <input type="number" id="min" placeholder="mins" class="w-[52px]"/>
+            <input type="number" id="sec" placeholder="secs" class="w-[52px]"/>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-left-right-icon lucide-arrow-left-right"
+              id="changecolour1"
+            >
+              <path d="M8 3 4 7l4 4" />
+              <path d="M4 7h16" />
+              <path d="m16 21 4-4-4-4" />
+              <path d="M20 17H4" />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-left-right-icon lucide-arrow-left-right hidden"
+              id="changecolour2"
+            >
+              <path d="M8 3 4 7l4 4" />
+              <path d="M4 7h16" />
+              <path d="m16 21 4-4-4-4" />
+              <path d="M20 17H4" />
+            </svg>
+          </div>
+          <div>
+            <p>to swap Aka Ao</p>
+          </div>
+        </div>
+      </div>
       <div class="w-98% mx-auto grid grid-cols-2">
-        <div class="bg-red-600 flex flex-col items-center text-white cursor-pointer">
-          <div class="text-[58px]">
-            <h1 id="r+">+</h1>
+        <div id="red"
+          class="bg-red-600 flex flex-col items-center text-white cursor-pointer"
+        >
+          <div class="text-[38px] flex gap-5">
+            <h1 id="r+">+1</h1>
+            <h1 id="r++">+2</h1>
+            <h1 id="r+++">+3</h1>
           </div>
           <div class="text-[80px]">
             <h1 id="rc">0</h1>
@@ -187,9 +240,13 @@
             </div>
           </div>
         </div>
-        <div class="bg-blue-600 flex flex-col items-center text-white cursor-pointer">
-          <div class="text-[58px]">
-            <h1 id="b+">+</h1>
+        <div id="blue"
+          class="bg-blue-600 flex flex-col items-center text-white cursor-pointer"
+        >
+          <div class="text-[38px] flex gap-5">
+            <h1 id="b+">+1</h1>
+            <h1 id="b++">+2</h1>
+            <h1 id="b+++">+3</h1>
           </div>
           <div class="text-[80px]">
             <h1 id="bc">0</h1>
@@ -367,30 +424,50 @@
         </div>
       </div>
     </div>
-    <div class="flex items-center justify-center gap-8">
-      <button class="border-black border-2 px-2 py-1 rounded-lg " id="rsen">SENSHU</button>
+    <div class="flex items-center justify-center gap-4">
+      <button class="border-black border-2 px-2 py-1 rounded-lg" id="rsen">
+        SENSHU
+      </button>
+      <button
+        class="border-black border-2 px-2 py-1 rounded-lg bg-red-600 hidden"
+        id="rsenr"
+      >
+        SENSHU
+      </button>
       <h1 class="text-center text-[38px] font-extrabold">KUMITE</h1>
-      <button class="border-black border-2 px-2 py-1 rounded-lg" id="bsen">SENSHU</button>
+      <button class="border-black border-2 px-2 py-1 rounded-lg" id="bsen">
+        SENSHU
+      </button>
+      <button
+        class="border-black border-2 px-2 py-1 rounded-lg bg-blue-600 hidden"
+        id="bsenb"
+      >
+        SENSHU
+      </button>
     </div>
     <!-- Second Part -->
-    <section >
+    <section>
       <div class="2xl:container mx-auto">
-        <div class="w-98% mx-auto grid grid-cols-1 ">
-          <div class="flex flex-col justify-center items-center ">
-            <div class="text-[50px] flex-col items-center p-[10px] pt-0 rounded-lg shadow-2xl">
+        <div class="w-98% mx-auto grid grid-cols-1">
+          <div class="flex flex-col justify-center items-center">
+            <div
+              class="text-[50px] flex-col items-center p-[10px] pt-0 rounded-lg shadow-2xl"
+            >
               <div id="timer" class="text-center">00:00</div>
-              <div class="text-center">------------------------</div>
-              <div class="flex justify-evenly gap-8 text-[18px] p-[10px 20px] m-[10px 5px] cursor-pointer">
-                <div><button onclick="startTimer()" >Start</button></div>
-                <div><button onclick="stopTimer()" >Stop</button></div>
-                <div><button onclick="resetTimer()" >Reset</button></div>
+              <div
+                class="flex justify-evenly gap-6 text-[18px] p-[10px 20px] m-[10px 5px] cursor-pointer"
+              >
+                <div><button onclick="startTimer()" class="border-2 px-2">Start</button></div>
+                <div><button onclick="stopTimer()" class="border-2 px-2">Stop</button></div>
+                <div><button onclick="resetTimer()" class="border-2 px-2">Reset</button></div>
               </div>
-              <div class="text-center">------------------------</div>
-              <div class="flex justify-evenly gap-8 text-[18px] p-[10px 20px] m-[10px 5px] cursor-pointer">
-                <div><button onclick="increaseTimet()" >+30s</button></div>
-                <div><button onclick="increaseTime()" >+1s</button></div>
-                <div><button onclick="decreaseTime()" >-1s</button></div>
-                <div><button onclick="decreaseTimet()" >-30s</button></div>
+              <div
+                class="flex justify-evenly gap-6 text-[18px]  m-4 cursor-pointer"
+              >
+                <div><button onclick="increaseTimet()"class="border-2 px-2">+30s</button></div>
+                <div><button onclick="increaseTime()"class="border-2 px-2">+1s</button></div>
+                <div><button onclick="decreaseTime()"class="border-2 px-2">-1s</button></div>
+                <div><button onclick="decreaseTimet()"class="border-2 px-2">-30s</button></div>
               </div>
             </div>
           </div>
@@ -398,19 +475,66 @@
       </div>
     </section>
     <script>
+      // change aka and ao
+      var red = document.getElementById("red");
+      var blue = document.getElementById("blue");
+      var changecolour1 = document.getElementById("changecolour1");
+      changecolour1.addEventListener("click",() =>{
+        rsenr.classList.remove("bg-red-600");
+        rsenr.classList.add("bg-blue-600");
+        bsenb.classList.remove("bg-blue-600");
+        bsenb.classList.add("bg-red-600");
+        changecolour2.classList.remove("hidden");
+        changecolour1.classList.add("hidden");
+        red.classList.remove("bg-red-600");
+        red.classList.add("bg-blue-600");
+        blue.classList.remove("bg-blue-600");
+        blue.classList.add("bg-red-600");
+      })
+      changecolour2.addEventListener("click",() =>{
+        bsenb.classList.remove("bg-red-600");
+        bsenb.classList.add("bg-blue-600");
+        rsenr.classList.remove("bg-blue-600");
+        rsenr.classList.add("bg-red-600");
+        changecolour1.classList.remove("hidden");
+        changecolour2.classList.add("hidden");
+        blue.classList.remove("bg-red-600");
+        blue.classList.add("bg-blue-600");
+        red.classList.remove("bg-blue-600");
+        red.classList.add("bg-red-600");
+      })
       // senshu
       var rsen = document.getElementById("rsen");
+      var rsenr = document.getElementById("rsenr");
       var bsen = document.getElementById("bsen");
+      var bsenb = document.getElementById("bsenb");
 
-      rsen.addEventListener("click",() =>{
+      rsen.addEventListener("click", () => {
         bsen.classList.add("hidden");
-        rsen.classList.add("bg-red-500");
-      })
-
-      bsen.addEventListener("click",() =>{
         rsen.classList.add("hidden");
-        bsen.classList.add("bg-blue-500");
-      })
+        rsenr.classList.remove("hidden");
+        bsenb.classList.add("hidden");
+      });
+
+      bsen.addEventListener("click", () => {
+        rsen.classList.add("hidden");
+        bsen.classList.add("hidden");
+        rsenr.classList.add("hidden");
+        bsenb.classList.remove("hidden");
+      });
+
+      rsenr.addEventListener("click", () => {
+        bsen.classList.remove("hidden");
+        rsen.classList.remove("hidden");
+        rsenr.classList.add("hidden");
+        bsenb.classList.add("hidden");
+      });
+      bsenb.addEventListener("click", () => {
+        rsen.classList.remove("hidden");
+        bsen.classList.remove("hidden");
+        bsenb.classList.add("hidden");
+        rsenr.classList.add("hidden");
+      });
       // fouls--blue
       var boneo = document.getElementById("b1o");
       var bonec = document.getElementById("b1c");
@@ -422,38 +546,38 @@
       var bfourc = document.getElementById("b4c");
       var bfiveo = document.getElementById("b5o");
       var bfivec = document.getElementById("b5c");
-      
-      boneo.addEventListener("click",() =>{
+
+      boneo.addEventListener("click", () => {
         bonec.classList.remove("hidden");
         boneo.classList.add("hidden");
-      })
-      bonec.addEventListener("click",() =>{
+      });
+      bonec.addEventListener("click", () => {
         boneo.classList.remove("hidden");
         bonec.classList.add("hidden");
-      })
-      btwoo.addEventListener("click",() =>{
+      });
+      btwoo.addEventListener("click", () => {
         bonec.classList.remove("hidden");
         boneo.classList.add("hidden");
         btwoc.classList.remove("hidden");
         btwoo.classList.add("hidden");
-      })
-      btwoc.addEventListener("click",() =>{
+      });
+      btwoc.addEventListener("click", () => {
         btwoo.classList.remove("hidden");
         btwoc.classList.add("hidden");
-      })
-      bthreeo.addEventListener("click",() =>{
+      });
+      bthreeo.addEventListener("click", () => {
         bonec.classList.remove("hidden");
         boneo.classList.add("hidden");
         btwoc.classList.remove("hidden");
         btwoo.classList.add("hidden");
         bthreec.classList.remove("hidden");
         bthreeo.classList.add("hidden");
-      })
-      bthreec.addEventListener("click",() =>{
+      });
+      bthreec.addEventListener("click", () => {
         bthreeo.classList.remove("hidden");
         bthreec.classList.add("hidden");
-      })
-      bfouro.addEventListener("click",() =>{
+      });
+      bfouro.addEventListener("click", () => {
         bonec.classList.remove("hidden");
         boneo.classList.add("hidden");
         btwoc.classList.remove("hidden");
@@ -462,12 +586,12 @@
         bthreeo.classList.add("hidden");
         bfourc.classList.remove("hidden");
         bfouro.classList.add("hidden");
-      })
-      bfourc.addEventListener("click",() =>{
+      });
+      bfourc.addEventListener("click", () => {
         bfouro.classList.remove("hidden");
         bfourc.classList.add("hidden");
-      })
-      bfiveo.addEventListener("click",() =>{
+      });
+      bfiveo.addEventListener("click", () => {
         bonec.classList.remove("hidden");
         boneo.classList.add("hidden");
         btwoc.classList.remove("hidden");
@@ -478,11 +602,11 @@
         bfouro.classList.add("hidden");
         bfivec.classList.remove("hidden");
         bfiveo.classList.add("hidden");
-      })
-      bfivec.addEventListener("click",() =>{
+      });
+      bfivec.addEventListener("click", () => {
         bfiveo.classList.remove("hidden");
         bfivec.classList.add("hidden");
-      })
+      });
       // fouls--red
       var roneo = document.getElementById("r1o");
       var ronec = document.getElementById("r1c");
@@ -494,38 +618,38 @@
       var rfourc = document.getElementById("r4c");
       var rfiveo = document.getElementById("r5o");
       var rfivec = document.getElementById("r5c");
-      
-      roneo.addEventListener("click",() =>{
+
+      roneo.addEventListener("click", () => {
         ronec.classList.remove("hidden");
         roneo.classList.add("hidden");
-      })
-      ronec.addEventListener("click",() =>{
+      });
+      ronec.addEventListener("click", () => {
         roneo.classList.remove("hidden");
         ronec.classList.add("hidden");
-      })
-      rtwoo.addEventListener("click",() =>{
+      });
+      rtwoo.addEventListener("click", () => {
         ronec.classList.remove("hidden");
         roneo.classList.add("hidden");
         rtwoc.classList.remove("hidden");
         rtwoo.classList.add("hidden");
-      })
-      rtwoc.addEventListener("click",() =>{
+      });
+      rtwoc.addEventListener("click", () => {
         rtwoo.classList.remove("hidden");
         rtwoc.classList.add("hidden");
-      })
-      rthreeo.addEventListener("click",() =>{
+      });
+      rthreeo.addEventListener("click", () => {
         ronec.classList.remove("hidden");
         roneo.classList.add("hidden");
         rtwoc.classList.remove("hidden");
         rtwoo.classList.add("hidden");
         rthreec.classList.remove("hidden");
         rthreeo.classList.add("hidden");
-      })
-      rthreec.addEventListener("click",() =>{
+      });
+      rthreec.addEventListener("click", () => {
         rthreeo.classList.remove("hidden");
         rthreec.classList.add("hidden");
-      })
-      rfouro.addEventListener("click",() =>{
+      });
+      rfouro.addEventListener("click", () => {
         ronec.classList.remove("hidden");
         roneo.classList.add("hidden");
         rtwoc.classList.remove("hidden");
@@ -534,12 +658,12 @@
         rthreeo.classList.add("hidden");
         rfourc.classList.remove("hidden");
         rfouro.classList.add("hidden");
-      })
-      rfourc.addEventListener("click",() =>{
+      });
+      rfourc.addEventListener("click", () => {
         rfouro.classList.remove("hidden");
         rfourc.classList.add("hidden");
-      })
-      rfiveo.addEventListener("click",() =>{
+      });
+      rfiveo.addEventListener("click", () => {
         ronec.classList.remove("hidden");
         roneo.classList.add("hidden");
         rtwoc.classList.remove("hidden");
@@ -550,120 +674,172 @@
         rfouro.classList.add("hidden");
         rfivec.classList.remove("hidden");
         rfiveo.classList.add("hidden");
-      })
-      rfivec.addEventListener("click",() =>{
+      });
+      rfivec.addEventListener("click", () => {
         rfiveo.classList.remove("hidden");
         rfivec.classList.add("hidden");
-      })
+      });
 
       // counter
       var rplus = document.getElementById("r+");
+      var rplus2 = document.getElementById("r++");
+      var rplus3 = document.getElementById("r+++");
       var rcount = document.getElementById("rc");
       var rneg = document.getElementById("r-");
-      rplus.addEventListener("click",() => {
-        rcount.textContent = parseInt(rcount.textContent)+1;
-      })
-      rneg.addEventListener("click",() =>{
-        rcount.textContent = parseInt(rcount.textContent)-1;
-      })
+      rplus.addEventListener("click", () => {
+        rcount.textContent = parseInt(rcount.textContent) + 1;
+      });
+      rplus2.addEventListener("click", () => {
+        rcount.textContent = parseInt(rcount.textContent) + 2;
+      });
+      rplus3.addEventListener("click", () => {
+        rcount.textContent = parseInt(rcount.textContent) + 3;
+      });
+      rneg.addEventListener("click", () => {
+        rcount.textContent = parseInt(rcount.textContent) - 1;
+      });
       var bplus = document.getElementById("b+");
+      var bplus2 = document.getElementById("b++");
+      var bplus3 = document.getElementById("b+++");
       var bcount = document.getElementById("bc");
       var bneg = document.getElementById("b-");
-      bplus.addEventListener("click",() => {
-        bcount.textContent = parseInt(bcount.textContent)+1;
-      })
-      bneg.addEventListener("click",() =>{
-        bcount.textContent = parseInt(bcount.textContent)-1;
-      })
+      bplus.addEventListener("click", () => {
+        bcount.textContent = parseInt(bcount.textContent) + 1;
+      });
+      bplus2.addEventListener("click", () => {
+        bcount.textContent = parseInt(bcount.textContent) + 2;
+      });
+      bplus3.addEventListener("click", () => {
+        bcount.textContent = parseInt(bcount.textContent) + 3;
+      });
+      bneg.addEventListener("click", () => {
+        bcount.textContent = parseInt(bcount.textContent) - 1;
+      });
+
       // Set initial time here
-    let INITIAL_MINUTES = 0;
-    let INITIAL_SECONDS = 0o0;
-    let totalSeconds = INITIAL_MINUTES * 60 + INITIAL_SECONDS;
-    let timerInterval = null;
+      let INITIAL_MINUTES = 0;
+      let INITIAL_SECONDS = 0; 
+      let totalSeconds = 0;
+      let timerInterval = null;
+      const ten = new Audio('https://ik.imagekit.io/RIDZYSANJU/kumite%20sound/calling-whistle-41861.mp3');
+      const sound = new Audio('https://ik.imagekit.io/RIDZYSANJU/kumite%20sound/slide-whistle-bomb-dropping-352754.mp3')
 
-    function updateDisplay() {
-      const minutes = Math.floor(totalSeconds / 60);
-      const seconds = totalSeconds % 60;
-      document.getElementById("timer").textContent =
-        String(minutes).padStart(2, '0') + ":" + String(seconds).padStart(2, '0');
-    }
+      // Update global variables whenever input is changed 
+      document.getElementById("min").addEventListener("input", function () {
+        INITIAL_MINUTES = parseInt(this.value) || 0;
+        updateTotalSeconds();
+      });
 
-    function tick() {
-      if (totalSeconds > 0) {
-        totalSeconds--;
-        updateDisplay();
-      } else {
-        stopTimer(); // stop when time is up
-      }
-    }
+      document.getElementById("sec").addEventListener("input", function () {
+        INITIAL_SECONDS = parseInt(this.value) || 0;
+        updateTotalSeconds();
+      });
 
-    function startTimer() {
-      if (!timerInterval) {
-        timerInterval = setInterval(tick, 1000);
-      }
-    }
-
-    function stopTimer() {
-      clearInterval(timerInterval);
-      timerInterval = null;
-    }
-
-    function resetTimer() {
-      rsen.classList.remove("hidden");
-      bsen.classList.remove("bg-blue-500");
-      bsen.classList.remove("hidden");
-      rsen.classList.remove("bg-red-500");
-      roneo.classList.remove("hidden");
-      ronec.classList.add("hidden");
-      rtwoo.classList.remove("hidden");
-      rtwoc.classList.add("hidden");
-      rthreeo.classList.remove("hidden");
-      rthreec.classList.add("hidden");
-      rfouro.classList.remove("hidden");
-      rfourc.classList.add("hidden");
-      rfiveo.classList.remove("hidden");
-      rfivec.classList.add("hidden");
-      boneo.classList.remove("hidden");
-      bonec.classList.add("hidden");
-      btwoo.classList.remove("hidden");
-      btwoc.classList.add("hidden");
-      bthreeo.classList.remove("hidden");
-      bthreec.classList.add("hidden");
-      bfouro.classList.remove("hidden");
-      bfourc.classList.add("hidden");
-      bfiveo.classList.remove("hidden");
-      bfivec.classList.add("hidden");
-      rcount.textContent = 0;
-      bcount.textContent = 0;
-      stopTimer();
-      totalSeconds = INITIAL_MINUTES * 60 + INITIAL_SECONDS;
-      updateDisplay();
-    }
-
-    function increaseTimet() {
-      totalSeconds+=30;
-      updateDisplay();
-    }
-
-    function increaseTime() {
-      totalSeconds++;
-      updateDisplay();
-    }
-
-    function decreaseTime() {
-      if (totalSeconds > 0) {
-        totalSeconds--;
+      function updateTotalSeconds() {
+        totalSeconds = INITIAL_MINUTES * 60 + INITIAL_SECONDS;
         updateDisplay();
       }
-    }
+    
+      function updateDisplay() {
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+        document.getElementById("timer").textContent =
+          String(minutes).padStart(2, "0") +
+          ":" +
+          String(seconds).padStart(2, "0");
+        if (seconds>0 && seconds<=10 && minutes==0){
+          document.getElementById("timer").classList.add("text-red-600");
+        }
+        if(seconds==10 && minutes==0){
+          ten.play();
+        }
+        if(seconds==0 && minutes==0){
+          sound.play();
+        }
+      }
 
-    function decreaseTimet() {
-      if (totalSeconds > 0) {
-        totalSeconds-=30;
+      function tick() {
+        if (totalSeconds > 0) {
+          totalSeconds--;
+          updateDisplay();
+        } else {
+          stopTimer(); // stop when time is up
+        }
+      }
+
+      function startTimer() {
+        if (!timerInterval) {
+          timerInterval = setInterval(tick, 1000);
+        }
+        var timer = document.getElementById("timer"); 
+        timer.classList.add("text-green-600");
+
+      }
+
+      function stopTimer() {
+        var timer = document.getElementById("timer"); 
+        timer.classList.remove("text-green-600");
+        timer.classList.remove("text-red-600");
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+
+      function resetTimer() {
+        rsen.classList.remove("hidden");
+        bsen.classList.remove("hidden");
+        bsenb.classList.add("hidden");
+        rsenr.classList.add("hidden");
+        roneo.classList.remove("hidden");
+        ronec.classList.add("hidden");
+        rtwoo.classList.remove("hidden");
+        rtwoc.classList.add("hidden");
+        rthreeo.classList.remove("hidden");
+        rthreec.classList.add("hidden");
+        rfouro.classList.remove("hidden");
+        rfourc.classList.add("hidden");
+        rfiveo.classList.remove("hidden");
+        rfivec.classList.add("hidden");
+        boneo.classList.remove("hidden");
+        bonec.classList.add("hidden");
+        btwoo.classList.remove("hidden");
+        btwoc.classList.add("hidden");
+        bthreeo.classList.remove("hidden");
+        bthreec.classList.add("hidden");
+        bfouro.classList.remove("hidden");
+        bfourc.classList.add("hidden");
+        bfiveo.classList.remove("hidden");
+        bfivec.classList.add("hidden");
+        rcount.textContent = 0;
+        bcount.textContent = 0;
+        stopTimer();
+        totalSeconds = INITIAL_MINUTES * 60 + INITIAL_SECONDS;
         updateDisplay();
       }
-    }
-    updateDisplay();
-  </script>
+
+      function increaseTimet() {
+        totalSeconds += 30;
+        updateDisplay();
+      }
+
+      function increaseTime() {
+        totalSeconds++;
+        updateDisplay();
+      }
+
+      function decreaseTime() {
+        if (totalSeconds > 0) {
+          totalSeconds--;
+          updateDisplay();
+        }
+      }
+
+      function decreaseTimet() {
+        if (totalSeconds > 0) {
+          totalSeconds -= 30;
+          updateDisplay();
+        }
+      }
+      updateDisplay();
+    </script>
   </body>
 </html>
